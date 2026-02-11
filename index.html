@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDEF — International Deaf Esports Federation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg-main:#111111;
+    --bg-section:#141414;
+    --bg-card:#1A1A1A;
+
+    --gold:#C6A44D;
+    --gold-dark:#B8902E;
+    --gold-light:#E6C76B;
+
+    --white:#FFFFFF;
+    --gray:#BFBFBF;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg-main);
+    color:var(--white);
+}
+
+h1,h2,h3,h4{
+    font-family:'Orbitron',sans-serif;
+    letter-spacing:1px;
+}
+
+section{
+    padding:100px 8%;
+}
+
+/* ===== HEADER ===== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 8%;
+    background:rgba(17,17,17,0.95);
+    border-bottom:1px solid rgba(198,164,77,0.15);
+}
+
+.logo{
+    font-size:22px;
+    color:var(--gold);
+}
+
+nav a{
+    margin-left:28px;
+    font-size:14px;
+    color:var(--gray);
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.join-btn{
+    margin-left:28px;
+    padding:9px 18px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    border-radius:4px;
+    font-weight:500;
+}
+
+.join-btn:hover{
+    background:rgba(198,164,77,0.1);
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    height:85vh;
+    background:
+    linear-gradient(rgba(17,17,17,0.85),rgba(17,17,17,0.95)),
+    url('https://images.unsplash.com/photo-1606813909355-41e6a04f4b02?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:46px;
+    color:var(--gold);
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:18px;
+    color:var(--gray);
+    margin-bottom:30px;
+}
+
+.cta{
+    padding:14px 34px;
+    background:var(--gold);
+    color:#111;
+    font-weight:600;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.cta:hover{
+    background:var(--gold-light);
+}
+
+/* ===== MISSION ===== */
+
+.mission{
+    background:var(--bg-section);
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    text-align:center;
+}
+
+.mission-item{
+    padding:40px;
+    background:var(--bg-card);
+    border:1px solid rgba(198,164,77,0.08);
+    transition:0.3s;
+}
+
+.mission-item:hover{
+    border-color:var(--gold-dark);
+}
+
+.mission-item h3{
+    margin:18px 0 10px;
+}
+
+.mission-item p{
+    color:var(--gray);
+    font-size:15px;
+}
+
+.icon{
+    font-size:34px;
+    color:var(--gold);
+}
+
+/* ===== TOURNAMENTS ===== */
+
+.tournaments{
+    background:var(--bg-main);
+}
+
+.tournaments h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--gold);
+}
+
+.tournament-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:var(--bg-card);
+    padding:30px;
+    border:1px solid rgba(198,164,77,0.12);
+    transition:0.3s;
+}
+
+.card:hover{
+    border-color:var(--gold);
+}
+
+.card h4{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--gray);
+    margin-bottom:6px;
+}
+
+.status{
+    color:var(--gold);
+    font-size:14px;
+}
+
+/* ===== PLAYERS ===== */
+
+.players{
+    background:var(--bg-section);
+    text-align:center;
+}
+
+.players h2{
+    margin-bottom:50px;
+    color:var(--gold);
+}
+
+.player-list{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.player img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:2px solid var(--gold-dark);
+    margin-bottom:12px;
+}
+
+.player span{
+    color:var(--gray);
+    font-size:14px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#0E0E0E;
+    padding:60px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+    border-top:1px solid rgba(198,164,77,0.15);
+}
+
+footer h4{
+    margin-bottom:14px;
+    color:var(--gold);
+}
+
+footer a{
+    display:block;
+    margin-bottom:8px;
+    color:var(--gray);
+    font-size:14px;
+}
+
+footer a:hover{
+    color:var(--gold);
+}
+
+.copy{
+    grid-column:1/-1;
+    text-align:center;
+    font-size:12px;
+    margin-top:30px;
+    color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">IDEF</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Tournaments</a>
+<a href="#">Community</a>
+<a href="#">Players</a>
+<a href="#">Contact</a>
+<a href="#" class="join-btn">Join IDEF</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>International Deaf Esports Federation</h1>
+<p>Empowering Deaf Gamers Worldwide</p>
+<a href="#" class="cta">Explore Tournaments</a>
+</section>
+
+<section class="mission">
+<div class="mission-item">
+<div class="icon">★</div>
+<h3>Inclusion</h3>
+<p>Equal access and visibility for Deaf gamers worldwide.</p>
+</div>
+<div class="mission-item">
+<div class="icon">⚔</div>
+<h3>Competition</h3>
+<p>Elite-level tournaments with professional standards.</p>
+</div>
+<div class="mission-item">
+<div class="icon">🤝</div>
+<h3>Community</h3>
+<p>A strong global network of players and supporters.</p>
+</div>
+</section>
+
+<section class="tournaments">
+<h2>Upcoming Tournaments</h2>
+<div class="tournament-grid">
+<div class="card">
+<h4>Valorant Championship</h4>
+<p>March 15, 2024</p>
+<p class="status">Registration Open</p>
+</div>
+<div class="card">
+<h4>CS2 Masters</h4>
+<p>April 02, 2024</p>
+<p class="status">Registration Open</p>
+</div>
+<div class="card">
+<h4>FIFA Esports Cup</h4>
+<p>April 20, 2024</p>
+<p class="status">Registration Open</p>
+</div>
+</div>
+</section>
+
+<section class="players">
+<h2>Featured Players</h2>
+<div class="player-list">
+<div class="player">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h4>SilentAce</h4>
+<span>USA</span>
+</div>
+<div class="player">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h4>NovaSign</h4>
+<span>Germany</span>
+</div>
+<div class="player">
+<img src="https://randomuser.me/api/portraits/men/76.jpg">
+<h4>EchoStrike</h4>
+<span>Brazil</span>
+</div>
+</div>
+</section>
+
+<footer>
+<div>
+<h4>IDEF</h4>
+<p style="color:#777;font-size:14px;">International Deaf Esports Federation</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<a href="#">Home</a>
+<a href="#">Tournaments</a>
+<a href="#">Players</a>
+</div>
+<div>
+<h4>Resources</h4>
+<a href="#">Rules</a>
+<a href="#">Accessibility</a>
+<a href="#">Media Kit</a>
+</div>
+<div>
+<h4>Connect</h4>
+<a href="#">Twitter</a>
+<a href="#">Discord</a>
+<a href="#">YouTube</a>
+</div>
+<div class="copy">© 2024 IDEF. All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
